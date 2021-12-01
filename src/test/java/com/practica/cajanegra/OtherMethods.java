@@ -68,23 +68,6 @@ class OtherMethods {
 	}
 
 	// -----------------------------------------
-
-	static Stream<Arguments> ArgumentosSize() {
-		return Stream.of(Arguments.of(4, lista1),
-				Arguments.of(0, listaVacia)
-		);
-	}
-
-	@DisplayName("Probando size()")
-	@ParameterizedTest
-	@CsvSource(value = {
-			"4:A,B,C,D",			
-			"5:A,B,B,A"
-	}, delimiter =':'
-	)
-	void testSize(int tam, SingleLinkedListImpl<String> list) {
-		assertEquals(tam, list.size());
-	}
 	
 	
 	static Stream<Arguments> ArgumentosSize2() {
